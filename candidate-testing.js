@@ -3,11 +3,11 @@ const input = require('readline-sync');
 // TODO 2: modify your quiz app to ask 5 questions //
 
 // TODO 1.1a: Define candidateName // 
-let candidateName;
+let candidateName = ""
 // TODO 1.2a: Define question, correctAnswer, and candidateAnswer //
-let question;
-let correctAnswer;
-let candidateAnswer;
+let question = "Who was the first American woman in space? "
+let correctAnswer = "Sally Ride"
+let candidateAnswer = ""
 
 
 //TODO: Variables for Part 2
@@ -16,12 +16,12 @@ let correctAnswers;
 let candidateAnswers;
 
 
-function askForName() {
+function askForName(candidateName) {
   // TODO 1.1b: Ask for candidate's name //
-
+input(candidateName);
 }
 
-function askQuestion() {
+function askQuestion(question) {
   // TODO 1.2b: Ask candidate the question and assign the response as candidateAnswer //
 
 
@@ -30,7 +30,7 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
 
   // TODO 1.2c: Let the candidate know if they have answered the question correctly or incorrectly // 
-
+console.log("Correct!");
 
 
   let grade;  //TODO 3.2 use this variable to calculate the candidates score.
@@ -42,7 +42,7 @@ function gradeQuiz(candidateAnswers) {
 function runProgram() {
   askForName();
   // TODO 1.1c: Greet candidate using their name //
-   console.log();
+   console.log("Hello," , candidateName);
   askQuestion();
   gradeQuiz(this.candidateAnswers);
 }
