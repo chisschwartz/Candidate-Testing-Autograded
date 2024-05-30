@@ -66,6 +66,11 @@ function gradeQuiz(candidateAnswers) {
 
 grade = (correctCandidateAnswers.length/5) * 100;
   console.log(grade);
+  if (grade >= 80) {
+    console.log("Test passed!!");
+  } else {
+    console.log("Test failed :(");
+  }
   return grade;
 }
 
